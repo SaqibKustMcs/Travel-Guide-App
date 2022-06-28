@@ -7,9 +7,10 @@ class Review extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+
       margin: EdgeInsets.symmetric(horizontal: 0,vertical: 5
       ),
-      elevation: 4,
+      elevation: 10,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
