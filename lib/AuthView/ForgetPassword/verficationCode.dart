@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_guide/TravelerView/ForgetPassword/changePassword.dart';
+import 'package:travel_guide/AuthView/ForgetPassword/changePassword.dart';
 
 class VerificationCode extends StatelessWidget {
   const VerificationCode({Key? key}) : super(key: key);
@@ -27,13 +27,13 @@ class VerificationCode extends StatelessWidget {
           ),
           Text("Enter",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 30)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           Text("Verification",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 30)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           Text("Code",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 30)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           SizedBox(
             height: 35,
           ),

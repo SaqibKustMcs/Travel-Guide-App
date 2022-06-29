@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 import 'package:travel_guide/Widgets/UserProfileWidget/review.dart';
 
-class UserProfile extends StatelessWidget {
-  const UserProfile({Key? key}) : super(key: key);
+class GuiderUserProfile extends StatelessWidget {
+  const GuiderUserProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class UserProfile extends StatelessWidget {
         actions: [
           CircleAvatar(
             radius: 24,
-            backgroundImage: AssetImage("assets/images/Ellipse 1.png"),
+            backgroundImage: AssetImage("assets/images/splash.png"),
             backgroundColor: Colors.pink,
           ),
           SizedBox(
@@ -67,7 +67,7 @@ class UserProfile extends StatelessWidget {
                   maxLines: 3,
                   textAlign: TextAlign.justify,
                   style:
-                      GoogleFonts.poppins(fontSize: 16, color: Color(0xff666666)),
+                  GoogleFonts.poppins(fontSize: 16, color: Color(0xff666666)),
                 ),
               ),
               SizedBox(
@@ -80,11 +80,10 @@ class UserProfile extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.5,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-
+                      color: Colors.blue,
                       image: DecorationImage(
-                          image: AssetImage("assets/images/Rectangle 13 .png"),
-                          fit: BoxFit.cover
-                      )),
+                          image: AssetImage("assets/images/splash.png"),
+                          fit: BoxFit.fill)),
                 ),
               ),
               SizedBox(height: 30,),
@@ -116,12 +115,12 @@ class UserProfile extends StatelessWidget {
               SizedBox(height: 30,),
               TextButton(
                   style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 50,vertical: 20),
-                    backgroundColor: Color(0xff85CDCA
-                    )
+                      padding: EdgeInsets.symmetric(horizontal: 50,vertical: 20),
+                      backgroundColor: Color(0xff85CDCA
+                      )
                   ),
                   onPressed: (){}, child: Text(
-                'Start Conversation',style: GoogleFonts.poppins(fontSize: 20,color: Colors.white),
+                'Update Profile',style: GoogleFonts.poppins(fontSize: 20,color: Colors.white),
               )),
               SizedBox(height: 20,),
             ],

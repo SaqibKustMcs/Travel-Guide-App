@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/TravelerView/CompletedOrder/completeOrder.dart';
 import 'package:travel_guide/TravelerView/UserProfile/editProfile.dart';
 class CurrentOrder extends StatelessWidget {
   const CurrentOrder({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class CurrentOrder extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: GestureDetector(
                                 onTap: (){Get.to(EditProfile());},
-                                child: Icon(Icons.edit,color: Colors.white,)),
+                                child: ImageIcon(AssetImage("assets/images/Vector (4).png"),color: Colors.white,)),
                           )
 
 
@@ -58,7 +59,9 @@ class CurrentOrder extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 10),
-                    child: Text("View Past Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),),
+                    child: GestureDetector(
+                        onTap: (){Get.to(CompleteOrder());},
+                        child: Text("View Past Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
                   )),
               SizedBox(height: 100,),
 

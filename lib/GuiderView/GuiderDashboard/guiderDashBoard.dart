@@ -13,15 +13,15 @@ import 'package:travel_guide/Widgets/Dashboard%20widgets/totalGuides.dart';
 import '../MainMenu/mainMenu.dart';
 
 
-class DashBoard extends StatefulWidget {
+class GuiderDashBoard extends StatefulWidget {
    late int value;
 
 
    @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<GuiderDashBoard> createState() => _GuiderDashBoardState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _GuiderDashBoardState extends State<GuiderDashBoard> {
 
   @override
   Widget build(BuildContext context) {

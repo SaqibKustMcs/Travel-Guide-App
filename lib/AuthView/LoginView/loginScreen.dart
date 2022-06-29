@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/AuthView/ForgetPassword/forgetPassword.dart';
+import 'package:travel_guide/AuthView/SignUp/signUp.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
-import 'package:travel_guide/TravelerView/ForgetPassword/forgetPassword.dart';
-import 'package:travel_guide/TravelerView/SignUp/signUp.dart';
 import 'package:travel_guide/TravelerView/Dashboard/dashBoard.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
 
@@ -29,16 +29,19 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: Text("Login",
                 style: GoogleFonts.poppins(
-                    color: Color(0xff183046), fontSize: 30)),
+                    color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "E-mail",
+            hintColor: Color(0xff666666),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "Password",
             leadinIcon: Image.asset("assets/images/sufix.png"),
+            hintColor: Color(0xff666666),
+
           ),
           SizedBox(
             height: 30,

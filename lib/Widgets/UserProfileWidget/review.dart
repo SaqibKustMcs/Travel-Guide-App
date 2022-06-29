@@ -20,7 +20,7 @@ class Review extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 25,
-              backgroundImage: AssetImage('assets/images/splash.png'),
+              backgroundImage: AssetImage('assets/images/Ellipse 1.png'),
             ),
             SizedBox(width: 10,),
             Expanded(

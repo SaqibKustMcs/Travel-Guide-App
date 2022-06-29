@@ -72,7 +72,7 @@ class CustomTextFields extends StatelessWidget {
             //     )),
             contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 0),
             hintText: hintText ?? hintText,
-            hintStyle: GoogleFonts.poppins(textStyle: TextStyle(color: hintColor!=null?hintColor:Colors.black,)),
+            hintStyle: GoogleFonts.poppins(textStyle: TextStyle(color: hintColor!=null?hintColor:Color(0xff666666),)),
             // hintStyle: TextStyle()
 
           ),

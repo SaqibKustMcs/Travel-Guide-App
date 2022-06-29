@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/TravelerView/AllRequest/AllRequest.dart';
 import 'package:travel_guide/TravelerView/Dashboard/dashBoard.dart';
 import 'package:travel_guide/TravelerView/MainMenu/mainMenu.dart';
 import 'package:travel_guide/TravelerView/Notification/conversationView.dart';
@@ -29,9 +30,9 @@ class bottomNavigationBarState extends State<bottomNavigationBar> {
   static  List<Widget> _widgetOptions = <Widget>[
     DashBoard(),
     AllChats(),
-    DashBoard(),
+    AllRequest(),
     NotificationPage(),
-    Saved()
+    MainMenu()
   ];
 
   @override
@@ -48,11 +49,11 @@ class bottomNavigationBarState extends State<bottomNavigationBar> {
         currentIndex: selectedIndex,
 
         items: const <BottomNavigationBarItem> [
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/Icons/Vector (12).png")),label: "Home"),
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/Icons/Vector (12).png",),),label: "Home"),
           BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/Icons/Vector (7).png")),label: "Messages"),
           BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/Icons/Vector (6).png')),label: "Media"),
           BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/Icons/Vector (5).png")),label:"Notifications"),
-          BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/Icons/Rectangle 19.png")),label:"Profile"),
+          BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/Icons/Vector (16).png"),),label:"Profile"),
 
         ],
 

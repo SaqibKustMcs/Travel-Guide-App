@@ -46,7 +46,7 @@ class ChangePassword extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: GestureDetector(
                                 onTap: (){Get.to(EditProfile());},
-                                  child: Icon(Icons.edit,color: Colors.white,)),
+                                  child: ImageIcon(AssetImage("assets/images/Vector (4).png"),color: Colors.white,)),
                             )
 
 

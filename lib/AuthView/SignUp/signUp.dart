@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_guide/TravelerView/LoginView/loginScreen.dart';
+import 'package:travel_guide/AuthView/LoginView/loginScreen.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
+import 'package:travel_guide/Widgets/DropDown/dropDown.dart';
 
 class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+  var selectedValue= "Traveller";
+
+   SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,27 +22,11 @@ class SignUp extends StatelessWidget {
           color: Color(0xff666666),
         ),
         actions: [
-          Row(
-            children: [
-              Text('Traveller',
-                  style: GoogleFonts.poppins(
-                    color: Color(
-                      0xff666666,
-                    ),
-                    fontSize: 18,
-                  )),
-            ],
+          Container(
+            child: dropDownSignup(selectedItem: selectedValue,),
+            width: 100,
+            height: 46,
           ),
-          SizedBox(
-            width: 5,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.expand_more_outlined,
-              size: 25,
-            ),
-          )
         ],
       ),
       body: ListView(
@@ -51,24 +38,34 @@ class SignUp extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text("Register",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.poppins(fontWeight: FontWeight.w500,
                     color: Color(0xff183046), fontSize: 30)),
           ),
           CustomTextFields(
             hintText: "Name",
+            hintColor: Color(0xff666666),
+
+
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "E-mail",
+            hintColor: Color(0xff666666),
+
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "Password",
+
+            hintColor: Color(0xff666666),
+
             leadinIcon: Image.asset("assets/images/sufix.png"),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "Confirm Password",
+            hintColor: Color(0xff666666),
+
             leadinIcon: Image.asset("assets/images/sufix.png"),
           ),
           SizedBox(

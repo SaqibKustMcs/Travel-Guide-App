@@ -27,23 +27,29 @@ class ChangePassword extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: Text("Update your",
                 style: GoogleFonts.poppins(
-                    color: Color(0xff183046), fontSize: 30)),
+                    color: Color(0xff183046), fontSize:36,fontWeight: FontWeight.w500)),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text("Password",
                 style: GoogleFonts.poppins(
-                    color: Color(0xff183046), fontSize: 30)),
+                    color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "New Password",
+            hintColor: Color(0xff666666),
+
             leadinIcon: Image.asset("assets/images/sufix.png"),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
             hintText: "Confirm Password",
+            hintColor: Color(0xff666666),
+
             leadinIcon: Image.asset("assets/images/sufix.png"),
+
+
           ),
           SizedBox(
             height: 30,

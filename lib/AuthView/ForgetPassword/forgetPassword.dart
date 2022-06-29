@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_guide/TravelerView/ForgetPassword/verficationCode.dart';
+import 'package:travel_guide/AuthView/ForgetPassword/verficationCode.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -25,13 +25,15 @@ class ForgetPassword extends StatelessWidget {
           SizedBox(height: 140,),
           Text("Forget",
               style: GoogleFonts.poppins(
-                  color: Color(0xff183046), fontSize: 30)),
+                  color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           Text("Password",
               style: GoogleFonts.poppins(
-                  color: Color(0xff183046), fontSize: 30)),
+                  color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
           SizedBox(height: 25,),
           CustomTextFields(
             hintText: "E-mail",
+            hintColor: Color(0xff666666),
+
           ),
           SizedBox(height: 25,),
           TextButton(
@@ -43,6 +45,7 @@ class ForgetPassword extends StatelessWidget {
               child: Text(
                 "Send",
                 style: GoogleFonts.poppins(
+                  fontSize: 17,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
           SizedBox(height:230,),
