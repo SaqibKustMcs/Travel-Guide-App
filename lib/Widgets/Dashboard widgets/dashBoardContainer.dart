@@ -102,7 +102,7 @@ class DashBoardContainer extends StatelessWidget {
                     ),
                     Icon(
                       Icons.favorite_border,
-                      color: Colors.orange,
+                      color: Color(0xffFF9494),
                       size: 13,
                     )
                   ],

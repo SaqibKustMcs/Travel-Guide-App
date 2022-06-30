@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/Widgets/NotificationWidgets/allChats.dart';
 
-class AllChats extends StatelessWidget {
-  const AllChats({Key? key}) : super(key: key);
+class GuiderAllChats extends StatelessWidget {
+  const GuiderAllChats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

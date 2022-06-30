@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 import 'package:travel_guide/Widgets/UserProfileWidget/review.dart';
 
 class GuiderUserProfile extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/Widgets/NotificationWidgets/notificationPageWidgets.dart';
-class NotificationPage extends StatelessWidget {
-  const NotificationPage({Key? key}) : super(key: key);
+class GuiderNotificationPage extends StatelessWidget {
+  const GuiderNotificationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

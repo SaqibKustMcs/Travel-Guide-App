@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
+import 'package:travel_guide/GuiderView/GuiderPayments/GuiderPayments.dart';
+import 'package:travel_guide/TravelerView/Payments/payments.dart';
 import 'package:travel_guide/TravelerView/AllRequest/AllRequest.dart';
 import 'package:travel_guide/TravelerView/Location/location.dart';
 import 'package:travel_guide/TravelerView/Payments/payments.dart';

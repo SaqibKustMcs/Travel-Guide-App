@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_guide/BottomBar/bottomNavBar.dart';
+import 'package:travel_guide/GuiderView/GuiderLocation/guiderLocation.dart';
+import 'package:travel_guide/GuiderView/GuiderPayments/GuiderPayments.dart';
+import 'package:travel_guide/GuiderView/UserProfile/guiderCurrentOrder.dart';
 import 'package:travel_guide/TravelerView/AllRequest/AllRequest.dart';
-import 'package:travel_guide/TravelerView/Location/location.dart';
-import 'package:travel_guide/TravelerView/Payments/payments.dart';
 import 'package:travel_guide/TravelerView/UserProfile/changePassword.dart';
 import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
+import 'package:travel_guide/Widgets/topContainer.dart';
 
-class MainMenu extends StatelessWidget {
-  const MainMenu({Key? key}) : super(key: key);
+class GuiderMainMenu extends StatelessWidget {
+  const GuiderMainMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,52 +21,13 @@ class MainMenu extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.22,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(color: Color(0xffC38D9D)),
-                  child: Center(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        radius: 40,
-                        backgroundImage:
-                            AssetImage("assets/images/Ellipse 1.png"),
-                      ),
-                      title: Text(
-                        "Hello Keyleen",
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18),
-                      ),
-                      subtitle: Text(
-                        "Travellers Profile",
-                        style: GoogleFonts.poppins(
-                            color: Colors.white.withOpacity(0.7), fontSize: 14),
-                      ),
-                      trailing: CircleAvatar(
-                          backgroundColor: Colors.white.withOpacity(0.2),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: InkWell(
-                                onTap: () {
-                                  Get.to(bottomNavigationBar(
-                                    editProfile: true,
-                                  ));
-                                },
-                                child: ImageIcon(AssetImage("assets/images/Vector (4).png",),color: Colors.white,)),
-                          )),
-                    ),
-                  ),
-                ),
-              ),
+              TopContainer(),
               SizedBox(
                 height: 20,
               ),
               Center(
                   child: GestureDetector(
-                    onTap: (){Get.to(Location());},
+                    onTap: (){Get.to(GuiderLocation());},
                     child: Stack(
                 children: [
                     Container(
@@ -96,7 +58,7 @@ class MainMenu extends StatelessWidget {
                             padding: const EdgeInsets.only(left: 18.0),
                             child: Center(
                                 child: Text(
-                              "Start Finding Your Guide",
+                              "Get your first traveller",
                               style: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontSize: 36,
@@ -112,13 +74,32 @@ class MainMenu extends StatelessWidget {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 13.0, vertical: 1),
+                const EdgeInsets.symmetric(horizontal: 13.0, vertical: 1),
                 child: GestureDetector(
-                  onTap: (){Get.to(Payments());},
+                  onTap: (){Get.to(GuiderMainMenu());},
                   child: ListTile(
                     tileColor: Color(0xffFFFFFF),
                     leading: Text(
-                      "Payments",
+                      "Traveller's Request",
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: Color(0xff4B4B4B)),
+                    ),
+                    trailing: Icon(Icons.navigate_next),
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 13.0, vertical: 1),
+                child: GestureDetector(
+                  onTap: (){},
+                  child: ListTile(
+
+                    tileColor: Color(0xffFFFFFF),
+                    leading: Text(
+                      "Update Service",
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
                           fontSize: 14,
@@ -132,11 +113,14 @@ class MainMenu extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 13.0, vertical: 1),
                 child: GestureDetector(
-                  onTap: (){Get.to(AllRequest());},
+                  onTap: (){Get.to(GuiderPayments());},
                   child: ListTile(
+                    tileColor: Color(0xffFFFFFF),
                     leading: Text(
-                      "Media",
-                      style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14,
+                      "Payments",
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
                           color: Color(0xff4B4B4B)),
                     ),
                     trailing: Icon(Icons.navigate_next),
@@ -145,7 +129,7 @@ class MainMenu extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(CurrentOrder());
+                  Get.to(GuiderCurrentOrder());
                 },
                 child: Padding(
                   padding:

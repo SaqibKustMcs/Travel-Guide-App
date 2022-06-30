@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:travel_guide/BottomBar/bottomNavBar.dart';
+import 'package:travel_guide/GuiderBottomBar/guiderBottomNavBar.dart';
+import 'package:travel_guide/GuiderView/GuiderMainMenu/guiderMainMenu.dart';
+import 'package:travel_guide/GuiderView/GuiderUserProfile/GuiderUserProfile.dart';
 import 'package:travel_guide/TravelerView/UserProfile/userProfile.dart';
 import 'package:travel_guide/Widgets/Dashboard%20widgets/Categories.dart';
 
@@ -10,18 +11,11 @@ import 'package:travel_guide/Widgets/Dashboard%20widgets/availableGuides.dart';
 import 'package:travel_guide/Widgets/Dashboard%20widgets/dashBoardContainer.dart';
 import 'package:travel_guide/Widgets/Dashboard%20widgets/totalGuides.dart';
 
-import '../MainMenu/mainMenu.dart';
 
 
-class GuiderDashBoard extends StatefulWidget {
-   late int value;
+class GuiderDashBoard extends StatelessWidget {
 
 
-   @override
-  State<GuiderDashBoard> createState() => _GuiderDashBoardState();
-}
-
-class _GuiderDashBoardState extends State<GuiderDashBoard> {
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +24,9 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
       backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xffFFFFFF),
+        title:ImageIcon(AssetImage("assets/Icons/Vector (13).png"),color: Color(0xff666666),),
+
+
         elevation: 0,
         iconTheme: IconThemeData(
           color: Color(0xff666666)
@@ -39,7 +36,7 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
         actions: [
           InkWell(
             onTap: (){
-             Get.to(MainMenu());
+             Get.to(GuiderMainMenu());
             },
             child: CircleAvatar(
               radius: 20,
@@ -98,13 +95,13 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Suggested Guides (2)',
+                    'Recently Checked (2)',
                     style: GoogleFonts.poppins(
                         fontSize: 24,
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(
@@ -116,7 +113,7 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                   itemCount: 2,
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
-                        onTap: (){Get.to(UserProfile());},
+                        onTap: (){Get.to(GuiderUserProfile());},
                         child: DashBoardContainer());
                   },
                 ),
@@ -125,13 +122,13 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Available Guides (12)',
+                    'Similar Guides (12)',
                     style: GoogleFonts.poppins(
                         fontSize: 24,
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(
@@ -146,7 +143,10 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.all(2.0),
-                      child: AvailableGuides(),
+                      child: InkWell(
+
+                          onTap: (){Get.to(GuiderUserProfile());},
+                          child: AvailableGuides()),
                     );
                   },
                 ),
@@ -162,7 +162,7 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(
@@ -177,7 +177,9 @@ class _GuiderDashBoardState extends State<GuiderDashBoard> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.all(2.0),
-                      child: TotalGuides(),
+                      child: InkWell(
+                          onTap: (){Get.to(GuiderUserProfile());},
+                          child: TotalGuides()),
                     );
                   },
                 ),

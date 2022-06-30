@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class Location extends StatelessWidget {
-  const Location({Key? key}) : super(key: key);
+class GuiderLocation extends StatelessWidget {
+  const GuiderLocation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class Location extends StatelessWidget {
 
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                        child: Text("we are finding your guide",style: GoogleFonts.poppins(fontSize: 36,fontWeight: FontWeight.w500),),
+                        child: Text("we are finding your travrller",style: GoogleFonts.poppins(fontSize: 36,fontWeight: FontWeight.w500),),
                       )),
                     ),
                   ],

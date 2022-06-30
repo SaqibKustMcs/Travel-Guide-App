@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/TravelerView/UserProfile/editProfile.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
-class ChangePassword extends StatelessWidget {
-  const ChangePassword({Key? key}) : super(key: key);
+class GuiderChangePassword extends StatelessWidget {
+  const GuiderChangePassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

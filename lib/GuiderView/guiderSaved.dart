@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/Widgets/Save/saveWidget.dart';
 
-class Saved extends StatelessWidget {
-  const Saved({Key? key}) : super(key: key);
+class GuiderSaved extends StatelessWidget {
+  const GuiderSaved({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

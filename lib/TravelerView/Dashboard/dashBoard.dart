@@ -104,7 +104,7 @@ class _DashBoardState extends State<DashBoard> {
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(
@@ -131,7 +131,7 @@ class _DashBoardState extends State<DashBoard> {
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(
@@ -162,7 +162,7 @@ class _DashBoardState extends State<DashBoard> {
                         fontWeight: FontWeight.w500,
                         color: Color(0xff183046)),
                   ),
-                  Icon(Icons.arrow_forward,color: Colors.grey,),
+                  ImageIcon(AssetImage("assets/Icons/Vector (17).png"),color: Color(0xffC38D9D),),
                 ],
               ),
               SizedBox(

@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/AuthView/ForgetPassword/forgetPassword.dart';
 import 'package:travel_guide/AuthView/SignUp/signUp.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
-import 'package:travel_guide/TravelerView/Dashboard/dashBoard.dart';
+import 'package:travel_guide/GuiderBottomBar/guiderBottomNavBar.dart';
+import 'package:travel_guide/GuiderView/GuiderDashboard/guiderDashBoard.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -51,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                 backgroundColor: Color(0xffE27D5F),
                 padding: EdgeInsets.symmetric(horizontal: 70, vertical: 14),
               ),
-              onPressed: () {Get.to(bottomNavigationBar());},
+              onPressed: () {Get.offAll(bottomNavigationBar());},
               child: Text(
                 "Login",
                 style: GoogleFonts.poppins(
@@ -97,10 +98,11 @@ class LoginScreen extends StatelessWidget {
             height: 20,
           ),
           TextButton.icon(
+
               style: TextButton.styleFrom(
                   backgroundColor: Color(0xffF1F6F7),
                   padding: EdgeInsets.symmetric(vertical: 14)),
-              onPressed: () {},
+              onPressed: () {Get.offAll(guiderBottomNavigationBar());},
               icon: Container(
                 height: 20,
                 width: 20,
