@@ -45,7 +45,7 @@ class ForgetPassword extends StatelessWidget {
               child: Text(
                 "Send",
                 style: GoogleFonts.poppins(
-                  fontSize: 17,
+                  fontSize: 20,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
           SizedBox(height:230,),

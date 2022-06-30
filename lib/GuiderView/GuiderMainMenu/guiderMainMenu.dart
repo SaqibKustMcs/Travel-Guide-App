@@ -3,10 +3,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/GuiderView/GuiderLocation/guiderLocation.dart';
 import 'package:travel_guide/GuiderView/GuiderPayments/GuiderPayments.dart';
+import 'package:travel_guide/GuiderView/TravellersRequest/travellersRequest.dart';
 import 'package:travel_guide/GuiderView/UserProfile/guiderCurrentOrder.dart';
-import 'package:travel_guide/TravelerView/AllRequest/AllRequest.dart';
 import 'package:travel_guide/TravelerView/UserProfile/changePassword.dart';
-import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
 import 'package:travel_guide/Widgets/topContainer.dart';
 
 class GuiderMainMenu extends StatelessWidget {
@@ -75,8 +74,13 @@ class GuiderMainMenu extends StatelessWidget {
               Padding(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 13.0, vertical: 1),
-                child: GestureDetector(
-                  onTap: (){Get.to(GuiderMainMenu());},
+                child: InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context)=>TravellersRequest())
+                    );
+                    // Get.to(TravellersRequest());
+                    },
                   child: ListTile(
                     tileColor: Color(0xffFFFFFF),
                     leading: Text(

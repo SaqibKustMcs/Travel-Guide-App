@@ -79,7 +79,7 @@ class SplashScreen extends StatelessWidget {
 
                       onPressed: (){
                      Get.to(LoginScreen());
-                      }, child: Text("Continue",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500),)),
+                      }, child: Text("Continue",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),)),
                 ))
           ]
         )

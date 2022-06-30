@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
+import 'package:travel_guide/Widgets/DropDown/selectGenderDropdown.dart';
 
 class GuiderEditProfile extends StatelessWidget {
   @override
@@ -91,7 +92,7 @@ class GuiderEditProfile extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: CustomTextFields(
                     hintText: "Male",
-                    leadinIcon: Icon(Icons.keyboard_arrow_down)),
+                    leadinIcon: SelectGender(selectedItem: "male",)),
               ),
               SizedBox(
                 height: 30,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/GuiderView/GuiderNotification/GuiderChats.dart';
 import 'package:travel_guide/Widgets/NotificationWidgets/allChats.dart';
 
 class GuiderAllChats extends StatelessWidget {
@@ -72,7 +74,9 @@ class GuiderAllChats extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: 10,
                   itemBuilder: (BuildContext context, int index) {
-                    return AllChat();
+                    return InkWell(
+                        onTap: (){Get.to(GuiderChats());},
+                        child: AllChat());
                   },
                 ),
               ),

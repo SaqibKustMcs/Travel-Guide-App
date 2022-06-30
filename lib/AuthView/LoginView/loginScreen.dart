@@ -56,6 +56,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 "Login",
                 style: GoogleFonts.poppins(
+                  fontSize: 20,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
           SizedBox(

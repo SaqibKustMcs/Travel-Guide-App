@@ -46,37 +46,4 @@ class _dropDownSignupState extends State<dropDownSignup> {
           });
         },
 
-      );
-      // child: DropdownButton<String>(
-      //   focusColor:Colors.white,
-      //   value: widget.choosenValue,
-      //   //elevation: 5,
-      //   style: TextStyle(color: Colors.white),
-      //   iconEnabledColor:Colors.black,
-      //   items: <String>[
-      //     'Traveller'
-      //     'Guider',
-      //     'None'
-      //   ].map<DropdownMenuItem<String>>((String value) {
-      //     return DropdownMenuItem<String>(
-      //       value: value,
-      //       child: Text(value,style:TextStyle(color:Colors.black),),
-      //     );
-      //   }).toList(),
-      //   hint:Text(
-      //     "Please choose a langauage",
-      //     style: TextStyle(
-      //         color: Colors.black,
-      //         fontSize: 14,
-      //         fontWeight: FontWeight.w500),
-      //   ),
-      //   onChanged: (value) {
-      //     setState(() {
-      //       widget.choosenValue = value.toString();
-      //       finalChoosenSignup = widget.choosenValue;
-      //     });
-      //   },
-      // ),
-    // );
-  }
-}
+      );}}

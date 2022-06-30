@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
+import 'package:travel_guide/GuiderBottomBar/guiderBottomNavBar.dart';
 class TopContainer extends StatelessWidget {
   const TopContainer({Key? key}) : super(key: key);
 
@@ -37,7 +38,7 @@ class TopContainer extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                       onTap: () {
-                        Get.to(bottomNavigationBar(
+                        Get.to(guiderBottomNavigationBar(
                           editProfile: true,
                         ));
                       },

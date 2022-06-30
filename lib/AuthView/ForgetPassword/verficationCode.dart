@@ -114,7 +114,7 @@ class VerificationCode extends StatelessWidget {
               child: Text(
                 "Verify",
                 style: GoogleFonts.poppins(
-                    color: Colors.white, fontWeight: FontWeight.w500),
+                    color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20),
               )),
           SizedBox(
             height: 30,

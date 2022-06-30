@@ -63,7 +63,7 @@ class ChangePassword extends StatelessWidget {
               child: Text(
                 "Confirm Changes",
                 style: GoogleFonts.poppins(
-                    color: Colors.white, fontWeight: FontWeight.w500),
+                    color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20),
               )),
           SizedBox(
             height: 15,

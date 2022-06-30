@@ -80,6 +80,7 @@ class SignUp extends StatelessWidget {
               child: Text(
                 "Sign Up",
                 style: GoogleFonts.poppins(
+                  fontSize: 20,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
           SizedBox(
