@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 class Categories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: EdgeInsets.symmetric(horizontal: 10,),
       width: MediaQuery.of(context).size.width*0.48,
       decoration: BoxDecoration(
-          boxShadow: [BoxShadow(color: Colors.black12,spreadRadius: 1, blurRadius: 8 )],
-
-          borderRadius: BorderRadius.circular(23),
-          color: Colors.white
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+              color: Colors.black12.withOpacity(0.1),
+              blurRadius: 10,
+              spreadRadius: 2,
+              offset: Offset(0.0, 10)
+          )
+        ],
       ),
       child: Row(
         children: [
@@ -27,7 +34,7 @@ class Categories extends StatelessWidget {
             ),
           ),
           SizedBox(width: 5,),
-          Text("Mountains",style: GoogleFonts.poppins(fontSize: 14,),)
+          Text("Mountains",style: GoogleFonts.poppins(fontSize: 14.sp,),)
         ],
       ),
     );

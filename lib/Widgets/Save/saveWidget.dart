@@ -7,11 +7,19 @@ class Savedwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Card(
-        elevation: 2,
-        shape: RoundedRectangleBorder(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0,vertical: 10),
+      child: Container(
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black12.withOpacity(0.1),
+                blurRadius: 10,
+                spreadRadius: 2,
+                offset: Offset(0.0, 10)
+            )
+          ],
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -46,20 +54,22 @@ class Savedwidget extends StatelessWidget {
                             "Onur Ozdeir",
                             style: GoogleFonts.poppins(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w400,
                                 color: Color(0xff666666)),
                           ),
                         ),
                         Text(
                           "Florida, USA",
                           style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
                               fontSize: 6, color: Color(0xff666666)),
                         ),
+                        SizedBox(height: 2,),
                         Row(
                           children: [
                             SmoothStarRating(
                               rating: 5,
-                              size: 10,
+                              size: 9,
                               color: Colors.yellow,
                               filledIconData: Icons.star,
                               halfFilledIconData: Icons.star_half,
@@ -73,9 +83,10 @@ class Savedwidget extends StatelessWidget {
                               //   });
                               // },
                             ),
-                            Text('(120)',style: GoogleFonts.poppins(fontSize: 10,color: Color(0xff666666)),),
+                            Text('(120)',style: GoogleFonts.poppins(fontSize: 8,color: Color(0xff666666)),),
                           ],
                         ),
+                        SizedBox(height: 3,),
 
                         Text("Enjoy a Thrilling Shared Airboat Ride, and Explore the Exhibits",
                             overflow: TextOverflow.ellipsis,
@@ -83,6 +94,7 @@ class Savedwidget extends StatelessWidget {
                             style: GoogleFonts.poppins(
                                 color: Color(0xff666666),
                                 fontSize: 8
+                                ,fontWeight: FontWeight.w300
                             ),
                             textAlign: TextAlign.justify),
                       ],

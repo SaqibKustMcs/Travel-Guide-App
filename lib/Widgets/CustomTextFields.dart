@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -39,7 +40,7 @@ class CustomTextFields extends StatelessWidget {
                 return null;
               },
           cursorColor: Colors.black,
-          style:GoogleFonts.workSans(textStyle: TextStyle(color: Colors.black,)),
+          style:GoogleFonts.poppins(textStyle: TextStyle(color: Colors.black,)),
           // cursorWidth: 20,
           decoration: InputDecoration(
             prefixIcon: prefixIcon??prefixIcon,
@@ -72,7 +73,7 @@ class CustomTextFields extends StatelessWidget {
             //     )),
             contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 0),
             hintText: hintText ?? hintText,
-            hintStyle: GoogleFonts.poppins(textStyle: TextStyle(color: hintColor!=null?hintColor:Color(0xff666666),)),
+            hintStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w400,color: hintColor!=null?hintColor:Color(0xff666666),)),
             // hintStyle: TextStyle()
 
           ),

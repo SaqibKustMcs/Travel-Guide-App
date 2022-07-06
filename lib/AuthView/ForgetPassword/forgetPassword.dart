@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
@@ -25,10 +26,10 @@ class ForgetPassword extends StatelessWidget {
           SizedBox(height: 140,),
           Text("Forget",
               style: GoogleFonts.poppins(
-                  color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                  color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           Text("Password",
               style: GoogleFonts.poppins(
-                  color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                  color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           SizedBox(height: 25,),
           CustomTextFields(
             hintText: "E-mail",
@@ -45,15 +46,15 @@ class ForgetPassword extends StatelessWidget {
               child: Text(
                 "Send",
                 style: GoogleFonts.poppins(
-                  fontSize: 20,
+                  fontSize: 20.sp,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
-          SizedBox(height:230,),
+          SizedBox(height:210,),
           Center(child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Already have Account? ',style: GoogleFonts.poppins(fontSize: 17,),),
-              Text('login ',style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w500),),
+              Text('Already have Account? ',style: GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w400,color: Color(0xff494A4A)),),
+              Text('login ',style: GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w500,color: Color(0xff494A4A)),),
 
             ],
           )),

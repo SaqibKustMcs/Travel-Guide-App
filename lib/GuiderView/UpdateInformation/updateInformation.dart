@@ -12,133 +12,139 @@ class UpdateInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopAppBar(),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Update",
-                      style: GoogleFonts.poppins(
-                          color: Color(0xff183046),
-                          fontSize: 36,
-                          fontWeight: FontWeight.w500)),
+        body:NotificationListener<OverscrollIndicatorNotification>(
+          onNotification: (OverscrollIndicatorNotification? overscroll) {
+            overscroll!.disallowIndicator();
+            return true;
+          },
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                TopAppBar(),
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Information",
-                      style: GoogleFonts.poppins(
-                          color: Color(0xff183046),
-                          fontSize: 36,
-                          fontWeight: FontWeight.w500)),
-                ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: CustomTextFields(
-                  hintText: "Dean",
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: CustomTextFields(
-                    hintText: "Florida, USA",
-                    leadinIcon: Icon(Icons.location_on_outlined,color: Colors.grey,)
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: CustomTextFields(
-                  hintText: "\$23",
-                  leadinIcon: ImageIcon(AssetImage("assets/images/hr.png")),
-
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: TextFormField(
-                  keyboardType: TextInputType.multiline,
-                  maxLines: 4,
-                  decoration: InputDecoration(
-                      hintText: "Description",
-                      hintStyle: TextStyle(color:Color(0xff666666,),fontSize: 17),
-                      helperMaxLines: 4,
-                      focusedBorder: OutlineInputBorder(
-
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      )
+                Padding(
+                  padding: const EdgeInsets.only(left: 18.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text("Update",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff183046),
+                            fontSize: 36,
+                            fontWeight: FontWeight.w500)),
                   ),
-
                 ),
-              ),
-              SizedBox(height: 20,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 18.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text("Information",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xff183046),
+                            fontSize: 36,
+                            fontWeight: FontWeight.w500)),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextFields(
+                    hintText: "Dean",
+                  ),
+                ),
 
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Stack(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.grey,
-                        radius: 30,
-                        backgroundImage: AssetImage("assets/images/Rectangle 13.png"),
-                      ),
-                      Positioned.fill(
-                        top: -50,
-                        child: Align(
-                          alignment: Alignment.bottomRight,
-                          child: Container(
-                            height: 20,
-                            width: 20,
-                            child: Icon(
-                              Icons.camera_alt,
-                              size: 10,
-                            ),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color:Color(0xffC38D9D)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextFields(
+                      hintText: "Florida, USA",
+                      leadinIcon: Icon(Icons.location_on_outlined,color: Colors.grey,)
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextFields(
+                    hintText: "\$23",
+                    leadinIcon: ImageIcon(AssetImage("assets/images/hr.png")),
+
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: TextFormField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: 4,
+                    decoration: InputDecoration(
+                        hintText: "Description",
+                        hintStyle: TextStyle(color:Color(0xff666666,),fontSize: 17),
+                        helperMaxLines: 4,
+                        focusedBorder: OutlineInputBorder(
+
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        )
+                    ),
+
+                  ),
+                ),
+                SizedBox(height: 20,),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Stack(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.grey,
+                          radius: 30,
+                          backgroundImage: AssetImage("assets/images/Rectangle 13.png"),
+                        ),
+                        Positioned.fill(
+                          top: -50,
+                          child: Align(
+                            alignment: Alignment.bottomRight,
+                            child: Container(
+                              height: 20,
+                              width: 20,
+                              child: Icon(
+                                Icons.camera_alt,
+                                size: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color:Color(0xffC38D9D)
+                              ),
                             ),
                           ),
-                        ),
 
-                      ),
-                    ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 40,),
+                SizedBox(height: 40,),
 
-              TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffE27D5F),
-                    padding: EdgeInsets.symmetric(horizontal: 120, vertical: 14),
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    "Publish",
-                    style: GoogleFonts.poppins(
-                        color: Colors.white, fontWeight: FontWeight.w500),
-                  )),
-              SizedBox(height: 20,),
-            ],
+                TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xffE27D5F),
+                      padding: EdgeInsets.symmetric(horizontal: 120, vertical: 14),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "Publish",
+                      style: GoogleFonts.poppins(
+                          color: Colors.white, fontWeight: FontWeight.w500),
+                    )),
+                SizedBox(height: 20,),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
+import 'package:travel_guide/Widgets/topContainer.dart';
 
 class EditProfile extends StatelessWidget {
   @override
@@ -15,7 +17,7 @@ class EditProfile extends StatelessWidget {
             children: [
               Center(
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.22,
+                  height: 231,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(color: Color(0xffC38D9D)),
                   child: Column(
@@ -28,7 +30,7 @@ class EditProfile extends StatelessWidget {
                             children: [
                               CircleAvatar(
                                 backgroundColor: Colors.grey,
-                                radius: 40,
+                                radius: 40.r,
                                 backgroundImage: AssetImage("assets/images/Ellipse 1.png"),
                               ),
                               Positioned.fill(
@@ -43,8 +45,8 @@ class EditProfile extends StatelessWidget {
                                       size: 17,
                                     ),
                                     decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color:Colors.white54,
+                                      shape: BoxShape.circle,
+                                      color:Colors.white54,
                                     ),
                                   ),
                                 ),
@@ -56,7 +58,7 @@ class EditProfile extends StatelessWidget {
                       ),
                       SizedBox(height: 10,),
                       Text('Hello Keyleen',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Colors.white,fontSize: 20),)
-                    ,  Text('Traveller Profile',style: GoogleFonts.poppins(color: Colors.white70,fontSize: 15),)
+                      ,  Text('Traveller Profile',style: GoogleFonts.poppins(color: Colors.white70,fontSize: 15),)
 
                     ],
                   ),

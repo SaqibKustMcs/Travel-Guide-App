@@ -196,22 +196,24 @@ class TravellersRequest extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 10,
             ),
-            TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Color((0xffE27D5F)),
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 125, vertical: 10),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Send",
-                  style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20),
-                ))
+            Center(
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color((0xffE27D5F)),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 125, vertical: 10),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Send",
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20),
+                  )),
+            )
           ],
         ),
       ),

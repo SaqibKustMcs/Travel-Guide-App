@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/TravelerView/CompletedOrder/completeOrder.dart';
 import 'package:travel_guide/TravelerView/UserProfile/editProfile.dart';
+import 'package:travel_guide/Widgets/topContainer.dart';
 class CurrentOrder extends StatelessWidget {
   const CurrentOrder({Key? key}) : super(key: key);
 
@@ -18,42 +20,7 @@ class CurrentOrder extends StatelessWidget {
 
 
             children: [
-              Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height*0.22,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      color: Color(0xffC38D9D)
-                  ),
-                  child: Center(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        radius:40,
-                        backgroundImage: AssetImage("assets/images/Ellipse 1.png"),
-
-
-                      ),
-                      title: Text("Hello Keyleen",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 18),),
-                      subtitle: Text("Travellers Profile",style: GoogleFonts.poppins(fontSize:14,color: Colors.white.withOpacity(0.7)),),
-                      trailing: CircleAvatar(
-
-
-                          backgroundColor: Colors.white.withOpacity(0.2),
-
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: GestureDetector(
-                                onTap: (){Get.to(EditProfile());},
-                                child: ImageIcon(AssetImage("assets/images/Vector (4).png"),color: Colors.white,)),
-                          )
-
-
-
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              TopContainer(),
               SizedBox(height: 10),
               Align(
                   alignment: Alignment.centerRight,
@@ -61,7 +28,8 @@ class CurrentOrder extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 10),
                     child: GestureDetector(
                         onTap: (){Get.to(CompleteOrder());},
-                        child: Text("View Past Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
+                        child: Text("View Past Orders",style: GoogleFonts.poppins
+                            (fontSize: 17.sp,fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
                   )),
               SizedBox(height: 100,),
 
@@ -77,10 +45,10 @@ class CurrentOrder extends StatelessWidget {
                       children: [
                         Text("Current",
                             style: GoogleFonts.poppins(
-                                color: Color(0xff183046), fontSize: 36)),
+                                color: Color(0xff183046), fontSize: 36.sp)),
                         Text("Tours",
                             style: GoogleFonts.poppins(
-                                color: Color(0xff183046), fontSize: 36)),
+                                color: Color(0xff183046), fontSize: 36.sp)),
                       ],
                     ),
                     Icon(Icons.arrow_forward_outlined,size: 26,color: Colors.grey,)
@@ -116,19 +84,19 @@ class CurrentOrder extends StatelessWidget {
                                   maxLines: 2,
                                   style: GoogleFonts.poppins(
                                     color: Color(0xff666666),
-                                    fontSize: 18
+                                    fontSize: 18.sp
                                   ),
                                   textAlign: TextAlign.justify),
                               SizedBox(height: 10,),
                               Row(
                                 children: [
-                                  Icon(Icons.location_on_sharp,color:Colors.red,),
+                                  Icon(Icons.location_on_sharp,color:Color(0xffD99494),),
                                   Text("Track Guide",
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
                                       style: GoogleFonts.poppins(
                                         color: Color(0xff666666),
-                                        fontSize: 12
+                                        fontSize: 12.sp
                                       ),
                                       textAlign: TextAlign.justify),
                                 ],
@@ -144,7 +112,7 @@ class CurrentOrder extends StatelessWidget {
                                 maxLines: 2,
                                 style: GoogleFonts.poppins(
                                     color: Color(0xff666666),
-                                    fontSize: 16
+                                    fontSize: 16.sp
                                 ),
                                 textAlign: TextAlign.justify),
                             SizedBox(height: 10,),
@@ -153,7 +121,7 @@ class CurrentOrder extends StatelessWidget {
                                 maxLines: 2,
                                 style: GoogleFonts.poppins(
                                   color:Color(0xff183046),
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
 
 
                                 ),
@@ -182,7 +150,7 @@ class CurrentOrder extends StatelessWidget {
                           height: MediaQuery.of(context).size.height*0.09,
 
                           width: MediaQuery.of(context).size.width*0.06,
-                          child: Icon(Icons.close,size: 12,color: Colors.white70,),
+                          child: Icon(Icons.close,size: 12,color: Colors.white,),
                         ),
                       ))
                 ],

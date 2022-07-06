@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/GuiderView/GuiderCompletedOrder/completeOrder.dart';
 import 'package:travel_guide/TravelerView/CompletedOrder/completeOrder.dart';
 import 'package:travel_guide/TravelerView/UserProfile/editProfile.dart';
+import 'package:travel_guide/Widgets/topContainer.dart';
 class GuiderCurrentOrder extends StatelessWidget {
   const GuiderCurrentOrder({Key? key}) : super(key: key);
 
@@ -19,42 +20,7 @@ class GuiderCurrentOrder extends StatelessWidget {
 
 
             children: [
-              Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height*0.22,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      color: Color(0xffC38D9D)
-                  ),
-                  child: Center(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        radius:40,
-                        backgroundImage: AssetImage("assets/images/Ellipse 1.png"),
-
-
-                      ),
-                      title: Text("Hello Keyleen",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 18),),
-                      subtitle: Text("Travellers Profile",style: GoogleFonts.poppins(fontSize:14,color: Colors.white.withOpacity(0.7)),),
-                      trailing: CircleAvatar(
-
-
-                          backgroundColor: Colors.white.withOpacity(0.2),
-
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: GestureDetector(
-                                onTap: (){Get.to(EditProfile());},
-                                child: ImageIcon(AssetImage("assets/images/Vector (4).png"),color: Colors.white,)),
-                          )
-
-
-
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              TopContainer(),
               SizedBox(height: 10),
               Align(
                   alignment: Alignment.centerRight,

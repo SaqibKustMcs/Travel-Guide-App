@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/Widgets/TopAppBar/topAppBar.dart';
 class GuiderLocation extends StatelessWidget {
   const GuiderLocation({Key? key}) : super(key: key);
 
@@ -10,21 +11,7 @@ class GuiderLocation extends StatelessWidget {
         backgroundColor: Color(0xffE5E5E5),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(Icons.arrow_back),
-                  CircleAvatar(
-                    radius: 25,
-                    backgroundImage: AssetImage('assets/images/Ellipse 1.png'),
-                  ),
-                ],
-
-
-              ),
-            ),
+            TopAppBar(),
             Expanded(
               child: Container(
                 height: MediaQuery.of(context).size.height,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/AuthView/ForgetPassword/forgetPassword.dart';
 import 'package:travel_guide/AuthView/SignUp/signUp.dart';
 import 'package:travel_guide/BottomBar/bottomNavBar.dart';
 import 'package:travel_guide/GuiderBottomBar/guiderBottomNavBar.dart';
-import 'package:travel_guide/GuiderView/GuiderDashboard/guiderDashBoard.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: Text("Login",
                 style: GoogleFonts.poppins(
-                    color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                    color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           ),
           SizedBox(height: 10,),
           CustomTextFields(
@@ -56,7 +56,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 "Login",
                 style: GoogleFonts.poppins(
-                  fontSize: 20,
+                  fontSize: 20.sp,
                     color: Colors.white, fontWeight: FontWeight.w500),
               )),
           SizedBox(
@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Forget Password',
-                  style: GoogleFonts.poppins(color: Color(0xff494A4A)),
+                  style: GoogleFonts.poppins(color: Color(0xff494A4A),fontSize: 18.sp,fontWeight:FontWeight.w400),
                 )),
           ),
           SizedBox(
@@ -84,7 +84,8 @@ class LoginScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Text(
                       "OR",
-                      style: GoogleFonts.poppins(color: Color(0xff666666)),
+                      style: GoogleFonts.poppins(color: Color(0xff666666,),fontWeight:FontWeight.w400,fontSize: 20.sp
+                      ),
                     ),
                   ),
                 ),
@@ -105,18 +106,18 @@ class LoginScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 14)),
               onPressed: () {Get.offAll(guiderBottomNavigationBar());},
               icon: Container(
-                height: 20,
-                width: 20,
+                height: 25,
+                width: 25,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/google.png"))),
               ),
               label: Text(
                 "       Login with Google",
-                style: GoogleFonts.poppins(color: Color(0xff808B9B)),
+                style: GoogleFonts.poppins(color: Color(0xff808B9B),fontSize: 20.sp,fontWeight: FontWeight.w500),
               )),
           SizedBox(
-            height: 140,
+            height: 100,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +125,7 @@ class LoginScreen extends StatelessWidget {
               Text(
                 'Do not have account? ',
                 style:
-                    GoogleFonts.poppins(fontSize: 16, color: Color(0xff666666)),
+                    GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w500, color: Color(0xff666666)),
               ),
               InkWell(
                   onTap: () {
@@ -133,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                   child: Text(
                     "Sign Up",
                     style: GoogleFonts.poppins(
-                        fontSize: 18, color: Color(0xff494A4A)),
+                        fontSize: 19.sp, color: Color(0xff494A4A),fontWeight: FontWeight.w500),
                   ))
             ],
           ),

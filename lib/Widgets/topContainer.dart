@@ -10,7 +10,7 @@ class TopContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.22,
+        height: 145,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(color: Color(0xffC38D9D)),
         child: Center(

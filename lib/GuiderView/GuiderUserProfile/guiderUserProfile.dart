@@ -100,7 +100,7 @@ class GuiderUserProfile extends StatelessWidget {
               Divider(thickness: 2,),
               SingleChildScrollView(
                 child: Container(
-                  height: MediaQuery.of(context).size.height*0.243,
+                  height: MediaQuery.of(context).size.height*0.253,
                   child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {

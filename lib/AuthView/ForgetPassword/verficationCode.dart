@@ -1,5 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -27,13 +28,13 @@ class VerificationCode extends StatelessWidget {
           ),
           Text("Enter",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           Text("Verification",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           Text("Code",
               style:
-                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36,fontWeight: FontWeight.w500)),
+                  GoogleFonts.poppins(color: Color(0xff183046), fontSize: 36.sp,fontWeight: FontWeight.w500)),
           SizedBox(
             height: 35,
           ),
@@ -91,14 +92,14 @@ class VerificationCode extends StatelessWidget {
               Text(
                 'Did not receive yet? ',
                 style:
-                    GoogleFonts.poppins(fontSize: 16, color: Color(0xff666666)),
+                    GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w400, color: Color(0xff666666)),
               ),
               InkWell(
                   onTap: () {},
                   child: Text(
                     "Resend",
                     style: GoogleFonts.poppins(
-                        fontSize: 18, color: Color(0xff494A4A)),
+                        fontSize: 18.sp, color: Color(0xff494A4A),fontWeight: FontWeight.w400),
                   ))
             ],
           ),
@@ -114,7 +115,7 @@ class VerificationCode extends StatelessWidget {
               child: Text(
                 "Verify",
                 style: GoogleFonts.poppins(
-                    color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20),
+                    color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20.sp),
               )),
           SizedBox(
             height: 30,

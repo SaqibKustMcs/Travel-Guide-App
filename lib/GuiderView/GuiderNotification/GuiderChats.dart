@@ -5,16 +5,18 @@ import 'package:travel_guide/Widgets/CustomTextFields.dart';
 import 'package:travel_guide/Widgets/DropDown/perHourDropDown.dart';
 import 'package:travel_guide/Widgets/GenerateOffer/GenerateOffer.dart';
 import 'package:travel_guide/Widgets/chatsAppBar/chatsAppBar.dart';
+import 'package:travel_guide/Widgets/dynanamic_chatting_headder.dart';
+import 'package:travel_guide/Widgets/sendMessageWidget.dart';
 class GuiderChats extends StatelessWidget {
   const GuiderChats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           children: [
-            ChatsAppBar(),
+            ChatingHeader(),
             InkWell(
                 onTap: (){Get.defaultDialog(
 
@@ -26,7 +28,9 @@ class GuiderChats extends StatelessWidget {
                     content:
                     Column(
                       children: [
-                        CustomTextFields(hintText: "Budget",leadinIcon: PerHourdropDown( selectedItem: "PH"),),
+                        CustomTextFields(hintText: "Budget",leadinIcon: Expanded(child: Container(
+                          width: 100,
+                            child: PerHourdropDown( selectedItem: "Per Hour"))),),
                         CustomTextFields(hintText: "Starts At",leadinIcon:Icon(Icons.calendar_today_rounded)),
                         CustomTextFields(hintText: "End At",),
                         SizedBox(height: 20,),
@@ -46,6 +50,24 @@ class GuiderChats extends StatelessWidget {
                     radius: 30
                 );},
                 child: GenerateOffer()),
+            Expanded(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                color: Colors.grey,
+                child: Column(
+                  children: [
+                    recievedMessageWidget(),
+
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.white,
+
+            ),
 
 
           ],

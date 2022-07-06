@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ChatsAppBar extends StatelessWidget {
   const ChatsAppBar({Key? key}) : super(key: key);
 

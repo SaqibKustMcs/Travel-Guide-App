@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 class TotalGuides extends StatelessWidget {
   const TotalGuides({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4.0,vertical: 5),
       child: Container(
         height: MediaQuery.of(context).size.height*0.2,
         width: MediaQuery.of(context).size.width*0.3,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
           color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black12.withOpacity(0.1),
+                blurRadius: 10,
+                spreadRadius: 2,
+                offset: Offset(0.0, 10)
+            )
+          ],
         ),
 
         child: Column(
@@ -46,7 +51,7 @@ class TotalGuides extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                           color: Color(0xffE27D5F)
                       ),
-                      child: Center(child: Text("120+",style: GoogleFonts.poppins(color: Colors.white,fontSize: 8),)),
+                      child: Center(child: Text("120+",style: GoogleFonts.poppins(color: Colors.white,fontSize: 8.sp),)),
                     ),
                   ),
                 ],
@@ -58,7 +63,7 @@ class TotalGuides extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Harry Risto',style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w500,color: Color(0xff666666)),),
+                  Text('Harry Risto',style: GoogleFonts.poppins(fontSize: 14.sp,fontWeight: FontWeight.w500,color: Color(0xff666666)),),
                   Icon(
                     Icons.favorite_border,
                     color: Colors.orange,size: 13,
@@ -71,7 +76,7 @@ class TotalGuides extends StatelessWidget {
               child: Align(
 
                   alignment: Alignment.centerLeft,
-                  child: Text('Florida, USA',style: GoogleFonts.poppins(color: Colors.grey,fontSize: 10),)),
+                  child: Text('Florida, USA',style: GoogleFonts.poppins(color: Colors.grey,fontSize: 10.sp),)),
             ),
 
 

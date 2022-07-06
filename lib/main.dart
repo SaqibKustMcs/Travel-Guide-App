@@ -1,9 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:travel_guide/GuiderBottomBar/guiderBottomNavBar.dart';
-import 'package:travel_guide/GuiderView/GuiderDashBoard/GuiderDashBoard.dart';
-import 'package:travel_guide/GuiderView/TravellersRequest/travellersRequest.dart';
-import 'package:travel_guide/GuiderView/UpdateInformation/updateInformation.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:travel_guide/TravelerView/SplashScreen/splashScreen.dart';
 import 'package:get/get.dart';
@@ -17,11 +14,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return ScreenUtilInit(
+        designSize: const Size(360, 690),
+    minTextAdapt: true,
+    splitScreenMode: true,
+    builder: (context , child) {
+      return GetMaterialApp(
         title: 'Travel Guide',
-        home:SplashScreen(),
+        home: SplashScreen(),
         // home: TravellersRequest(),
-      debugShowCheckedModeBanner: false,
-    );
+        debugShowCheckedModeBanner: false,
+      );
+    });
   }
 }

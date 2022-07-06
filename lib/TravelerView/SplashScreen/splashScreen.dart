@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:travel_guide/AuthView/LoginView/loginScreen.dart';
@@ -45,16 +46,16 @@ class SplashScreen extends StatelessWidget {
 
                       children: [
                         SizedBox(height: 102,),
-                        Text("Unforgotton",style: GoogleFonts.poppins(fontSize: 48,fontWeight: FontWeight.w500
+                        Text("Unforgotton",style: GoogleFonts.poppins(fontSize: 48.sp,fontWeight: FontWeight.w500
                             ,color: Colors.white),),
-                        Text("Experience",style: GoogleFonts.poppins(fontSize: 48,fontWeight: FontWeight.w500
+                        Text("Experience",style: GoogleFonts.poppins(fontSize: 48.sp,fontWeight: FontWeight.w500
                             ,color: Colors.white),),
                         SizedBox(height: 15,),
                         Text("Book your tour with us we have many ",
-                          style: GoogleFonts.poppins(fontSize: 13
+                          style: GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w400
                               ,color: Colors.white),),
                         Text("packages to explore the world",
-                          style: GoogleFonts.poppins(fontSize: 13
+                          style: GoogleFonts.poppins(fontSize: 13.sp
                               ,color: Colors.white),),
 
 
@@ -79,7 +80,7 @@ class SplashScreen extends StatelessWidget {
 
                       onPressed: (){
                      Get.to(LoginScreen());
-                      }, child: Text("Continue",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),)),
+                      }, child: Text("Continue",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20.sp),)),
                 ))
           ]
         )

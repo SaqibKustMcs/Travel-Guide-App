@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
+import 'package:travel_guide/GuiderView/Review/reviewScreen.dart';
 import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
+import 'package:travel_guide/Widgets/topContainer.dart';
  class CompleteOrder extends StatelessWidget {
    const CompleteOrder({Key? key}) : super(key: key);
 
@@ -20,49 +23,14 @@ import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
          body: SingleChildScrollView(
            child: Column(
              children: [
-               Container(
-                 height: MediaQuery.of(context).size.height * 0.22,
-                 width: MediaQuery.of(context).size.width,
-                 decoration: BoxDecoration(color: Color(0xffC38D9D)),
-                 child: Center(
-                   child: ListTile(
-                     leading: CircleAvatar(
-                       radius: 40,
-                       backgroundImage:
-                       AssetImage("assets/images/Ellipse 1.png"),
-                     ),
-                     title: Text(
-                       "Hello Keyleen",
-                       style: GoogleFonts.poppins(
-                           color: Colors.white,
-                           fontWeight: FontWeight.w500,
-                           fontSize: 18),
-                     ),
-                     subtitle: Text(
-                       "Travellers Profile",
-                       style: GoogleFonts.poppins(
-                           color: Colors.white.withOpacity(0.7), fontSize: 14),
-                     ),
-                     trailing: CircleAvatar(
-                         backgroundColor: Colors.white.withOpacity(0.2),
-                         child: Padding(
-                           padding: const EdgeInsets.all(8.0),
-                           child: InkWell(
-                               onTap: () {
-
-                               },
-                               child: ImageIcon(AssetImage("assets/images/Vector (4).png",),color: Colors.white,)),
-                         )),
-                   ),
-                 ),
-               ),
+               TopContainer(),
                Align(
                    alignment: Alignment.centerRight,
                    child: Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 10),
                      child: GestureDetector(
                          onTap:(){Get.to(CurrentOrder());},
-                         child: Text("View Current Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
+                         child: Text("View Current Orders",style: GoogleFonts.poppins(fontSize:17,fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
                    )),
                SizedBox(height: 50,),
                Padding(
@@ -76,10 +44,10 @@ import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
                        children: [
                          Text("Completed",
                              style: GoogleFonts.poppins(
-                                 color: Color(0xff183046), fontSize: 36)),
+                                 color: Color(0xff183046), fontSize: 36.sp)),
                          Text("Tours",
                              style: GoogleFonts.poppins(
-                                 color: Color(0xff183046), fontSize: 36)),
+                                 color: Color(0xff183046), fontSize: 36.sp)),
                        ],
                      ),
                      Icon(Icons.arrow_forward_outlined,size: 26,color: Colors.grey,)
@@ -127,13 +95,16 @@ import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
                                Row(
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                  children: [
-                                   Text("Rob Percivel",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w400,color:Color(0xff183046)),),
-                                   Text("\$12/hr",style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500,color:Color(0xff183046)),),
+                                   Text("Rob Percivel",style: GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w400,color:Color(0xff183046)),),
+                                   Text("\$12/hr",style: GoogleFonts.poppins(fontSize: 16.sp
+                                       ,fontWeight: FontWeight.w500,color:Color(0xff183046)),),
 
                                  ],
                                ),
-                               Text("Conpleted 2 days ago",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12,color: Color(0xff6A7A89)),)
-                              , Text("Drop Review",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12,color: Color(0xff559BDC)),)
+                               Text("Conpleted 2 days ago",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12.sp,color: Color(0xff6A7A89)),)
+                              , InkWell(
+                                   onTap: (){Get.to(ReviewScreen());},
+                                   child: Text("Drop Review",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12.sp,color: Color(0xff559BDC)),))
 
                              ],
                            ),
@@ -184,12 +155,12 @@ import 'package:travel_guide/TravelerView/UserProfile/currentOrder.dart';
                                Row(
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                  children: [
-                                   Text("Rob Percivel",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w400,color:Color(0xff183046)),),
-                                   Text("\$12/hr",style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500,color:Color(0xff183046)),),
+                                   Text("Rob Percivel",style: GoogleFonts.poppins(fontSize: 18.sp,fontWeight: FontWeight.w400,color:Color(0xff183046)),),
+                                   Text("\$12/hr",style: GoogleFonts.poppins(fontSize: 16.sp,fontWeight: FontWeight.w500,color:Color(0xff183046)),),
 
                                  ],
                                ),
-                               Text("Conpleted 2 days ago",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12,color: Color(0xff6A7A89)),)
+                               Text("Conpleted 2 days ago",style: GoogleFonts.poppins(fontWeight: FontWeight.w400,fontSize: 12.sp,color: Color(0xff6A7A89)),)
                               ,
                                SmoothStarRating(
                                  rating: 4,
