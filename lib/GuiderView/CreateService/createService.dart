@@ -2,6 +2,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../GuiderBottomBar/guiderBottomNavBar.dart';
 import '../../Widgets/CustomTextFields.dart';
 
 class CreateService extends StatelessWidget {
@@ -116,11 +117,15 @@ class CreateService extends StatelessWidget {
                     backgroundColor: Color(0xffE27D5F),
                     padding: EdgeInsets.symmetric(horizontal: 120, vertical: 14),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => guiderBottomNavigationBar())
+                    );
+                  },
                   child: Text(
                     "Publish",
                     style: GoogleFonts.poppins(
-                        color: Colors.white, fontWeight: FontWeight.w500),
+                        color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20),
                   )),
               SizedBox(height: 20,),
             ],

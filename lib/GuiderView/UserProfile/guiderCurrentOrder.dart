@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/GuiderView/GuiderCompletedOrder/completeOrder.dart';
@@ -28,9 +29,9 @@ class GuiderCurrentOrder extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 10),
                     child: GestureDetector(
                         onTap: (){Get.to(GuiderCompleteOrder());},
-                        child: Text("View Past Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
+                        child: Text("View Completed Orders",style: GoogleFonts.poppins(fontSize:18,fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
                   )),
-              SizedBox(height: 100,),
+              SizedBox(height: 60,),
 
 
               Padding(
@@ -44,10 +45,10 @@ class GuiderCurrentOrder extends StatelessWidget {
                       children: [
                         Text("Current",
                             style: GoogleFonts.poppins(
-                                color: Color(0xff183046), fontSize: 36)),
+                                color: Color(0xff183046), fontSize: 36.sp)),
                         Text("Tours",
                             style: GoogleFonts.poppins(
-                                color: Color(0xff183046), fontSize: 36)),
+                                color: Color(0xff183046), fontSize: 36.sp)),
                       ],
                     ),
                     Icon(Icons.arrow_forward_outlined,size: 26,color: Colors.grey,)
@@ -60,6 +61,7 @@ class GuiderCurrentOrder extends StatelessWidget {
 
                 children: [
                   Container(
+
 
 
                      width: MediaQuery.of(context).size.width*0.85,
@@ -89,7 +91,7 @@ class GuiderCurrentOrder extends StatelessWidget {
                               SizedBox(height: 10,),
                               Row(
                                 children: [
-                                  Icon(Icons.location_on_sharp,color:Colors.red,),
+                                  Icon(Icons.location_on_sharp,color:Color(0xffD99494),),
                                   Text("Track Guide",
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
@@ -142,14 +144,14 @@ class GuiderCurrentOrder extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Color(0xffFA6161)
+                              color: Color(0xffE27D5F)
 
                           ),
 
                           height: MediaQuery.of(context).size.height*0.09,
 
                           width: MediaQuery.of(context).size.width*0.06,
-                          child: Icon(Icons.close,size: 12,color: Colors.white70,),
+                          child: Icon(Icons.close,size: 12,color: Color(0xffFFFFFF),),
                         ),
                       ))
                 ],

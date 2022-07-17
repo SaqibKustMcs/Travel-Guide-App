@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,7 +30,8 @@ import '../../Widgets/topContainer.dart';
                      padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 10),
                      child: GestureDetector(
                          onTap:(){Get.to(CurrentOrder());},
-                         child: Text("View Current Orders",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
+                         child: Text("View Current Orders",style: GoogleFonts.poppins(fontSize: 18.sp
+                             ,fontWeight: FontWeight.w500,color: Color(0xffC38D9D)),)),
                    )),
                SizedBox(height: 50,),
                Padding(
@@ -43,10 +45,10 @@ import '../../Widgets/topContainer.dart';
                        children: [
                          Text("Completed",
                              style: GoogleFonts.poppins(
-                                 color: Color(0xff183046), fontSize: 36)),
+                                 color: Color(0xff183046), fontSize: 36.sp)),
                          Text("Tours",
                              style: GoogleFonts.poppins(
-                                 color: Color(0xff183046), fontSize: 36)),
+                                 color: Color(0xff183046), fontSize: 36.sp)),
                        ],
                      ),
                      Icon(Icons.arrow_forward_outlined,size: 26,color: Colors.grey,)
@@ -55,7 +57,7 @@ import '../../Widgets/topContainer.dart';
                ),
                SizedBox(height: 30,),
                Container(
-                 height: MediaQuery.of(context).size.height*0.14,
+                 height: 87,
                  width: MediaQuery.of(context).size.width*0.9,
                  decoration: BoxDecoration(
                  color: Color(0xffFFFFFFD),
@@ -114,7 +116,7 @@ import '../../Widgets/topContainer.dart';
                ),
                SizedBox(height: 30,),
                Container(
-                 height: MediaQuery.of(context).size.height*0.14,
+                 height: 87,
                  width: MediaQuery.of(context).size.width*0.9,
                  decoration: BoxDecoration(
                    color: Color(0xffFFFFFFD),
@@ -184,6 +186,7 @@ import '../../Widgets/topContainer.dart';
                    ),
                  ),
                ),
+               SizedBox(height: 20,),
              ],
            ),
          ),

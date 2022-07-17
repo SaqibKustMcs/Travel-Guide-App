@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,7 +43,8 @@ class UpdateInformation extends StatelessWidget {
                     child: Text("Information",
                         style: GoogleFonts.poppins(
                             color: Color(0xff183046),
-                            fontSize: 36,
+                            fontSize: 36.sp
+                            ,
                             fontWeight: FontWeight.w500)),
                   ),
                 ),
@@ -60,6 +62,7 @@ class UpdateInformation extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: CustomTextFields(
                       hintText: "Florida, USA",
+
                       leadinIcon: Icon(Icons.location_on_outlined,color: Colors.grey,)
                   ),
                 ),
@@ -78,17 +81,25 @@ class UpdateInformation extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: TextFormField(
                     keyboardType: TextInputType.multiline,
+
                     maxLines: 4,
                     decoration: InputDecoration(
+
+
                         hintText: "Description",
-                        hintStyle: TextStyle(color:Color(0xff666666,),fontSize: 17),
+                        hintStyle: GoogleFonts.poppins(color:Color(0xff666666,),fontSize: 18,fontWeight: FontWeight.w400),
                         helperMaxLines: 4,
                         focusedBorder: OutlineInputBorder(
 
                         ),
+
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                        )
+
+
+                        ),
+
+
                     ),
 
                   ),
@@ -114,7 +125,7 @@ class UpdateInformation extends StatelessWidget {
                               height: 20,
                               width: 20,
                               child: Icon(
-                                Icons.camera_alt,
+                                Icons.camera_alt,color: Colors.white,
                                 size: 10,
                               ),
                               decoration: BoxDecoration(

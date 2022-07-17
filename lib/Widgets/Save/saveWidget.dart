@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 class Savedwidget extends StatelessWidget {
@@ -27,7 +28,7 @@ class Savedwidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.13,
+                height: 101,
                 width: MediaQuery.of(context).size.width * 0.3,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -53,7 +54,7 @@ class Savedwidget extends StatelessWidget {
                           child: Text(
                             "Onur Ozdeir",
                             style: GoogleFonts.poppins(
-                                fontSize: 14,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                                 color: Color(0xff666666)),
                           ),
@@ -62,7 +63,7 @@ class Savedwidget extends StatelessWidget {
                           "Florida, USA",
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
-                              fontSize: 6, color: Color(0xff666666)),
+                              fontSize: 6.sp, color: Color(0xff666666)),
                         ),
                         SizedBox(height: 2,),
                         Row(
@@ -83,7 +84,7 @@ class Savedwidget extends StatelessWidget {
                               //   });
                               // },
                             ),
-                            Text('(120)',style: GoogleFonts.poppins(fontSize: 8,color: Color(0xff666666)),),
+                            Text('(120)',style: GoogleFonts.poppins(fontSize: 8.sp,color: Color(0xff666666),fontWeight: FontWeight.w300),),
                           ],
                         ),
                         SizedBox(height: 3,),
@@ -93,7 +94,7 @@ class Savedwidget extends StatelessWidget {
                             maxLines: 2,
                             style: GoogleFonts.poppins(
                                 color: Color(0xff666666),
-                                fontSize: 8
+                                fontSize: 8.sp
                                 ,fontWeight: FontWeight.w300
                             ),
                             textAlign: TextAlign.justify),
@@ -113,11 +114,11 @@ class Savedwidget extends StatelessWidget {
                       Text(
                         '\$124/h',
                         style:
-                        GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 13,color: Color(0xff183046)),
+                        GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 13.sp,color: Color(0xff183046)),
                       ),
                       Icon(
                         Icons.favorite,
-                        color: Colors.orange,
+                        color: Color(0xffFF9494),
                         size: 15,
                       )
                     ],

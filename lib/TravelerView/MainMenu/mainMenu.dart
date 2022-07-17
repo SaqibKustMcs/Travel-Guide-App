@@ -39,8 +39,8 @@ class MainMenu extends StatelessWidget {
                       child: Stack(
                   children: [
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.3,
-                        width: MediaQuery.of(context).size.width * 0.85,
+                        height: 275,
+                        width: MediaQuery.of(context).size.width * 0.9,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
@@ -95,7 +95,7 @@ class MainMenu extends StatelessWidget {
                             ,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -110,7 +110,7 @@ class MainMenu extends StatelessWidget {
                         style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -127,7 +127,7 @@ class MainMenu extends StatelessWidget {
                         style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -144,7 +144,7 @@ class MainMenu extends StatelessWidget {
                         style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -157,7 +157,7 @@ class MainMenu extends StatelessWidget {
                       style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                           color: Color(0xff4B4B4B)),
                     ),
-                    trailing: Icon(Icons.navigate_next),
+                    trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                   ),
                 ),
               ],

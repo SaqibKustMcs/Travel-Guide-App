@@ -1,117 +1,61 @@
-// import 'package:cloud_firestore/cloud_firestore.dart';
-// import 'package:fits_daxno/Constants/Theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// import '../Constants/constants.dart';
-// import '../model/message_Model.dart';
+import '../Constants/constants.dart';
 
-
-class recievedMessageWidget extends StatefulWidget {
-  recievedMessageWidget({Key ,key}) : super(key: key);
-  // message_Model ?message_model;
+class sendMessageWidget extends StatefulWidget {
 
   @override
-  _recievedMessageWidgetState createState() => _recievedMessageWidgetState();
+  _sendMessageWidgetState createState() => _sendMessageWidgetState();
 }
 
-class _recievedMessageWidgetState extends State<recievedMessageWidget> {
-  // Timestamp time=new Timestamp(100, 100);
-  @override
-  void initState() {
-    // time=widget.message_model!.createdAt;
-    // TODO: implement initState
-    super.initState();
-  }
+class _sendMessageWidgetState extends State<sendMessageWidget> {
+  bool offergenerate=true;
+
+
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
+    return
+
         Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          padding: EdgeInsets.symmetric(horizontal: 0,vertical: 0),
+          margin: EdgeInsets.only(left: 100,right: 20),
+          height: 52,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10),bottomLeft: Radius.circular(10)),
+          ),
+          child: Stack(
+            clipBehavior: Clip.none,
             children: [
-
               Container(
-                margin: EdgeInsets.only(top: 20),
+
+
                 decoration: BoxDecoration(
-                  boxShadow: [BoxShadow(
-                      color: Colors.grey.shade200,
-                      spreadRadius: 0,
-                      blurRadius: 0
-                  )],
+                    color: Color(0xff66BBB7),
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10),bottomLeft: Radius.circular(10)),
+
                 ),
-                child: Stack(
-
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(14),
-                      margin: EdgeInsets.only(right: 50,left: 20),
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Visibility(
-                          //   visible: widget.message_model?.fileUrl!=null &&  widget.message_model?.messagetype=='jpg' || widget.message_model?.messagetype=='png' || widget.message_model?.messagetype=='jpeg',
-                          //   child: Container(
-                          //     decoration: BoxDecoration(
-                          //       borderRadius: BorderRadius.circular(10),
-                          //     ),
-                          //     child: Image.network('${widget.message_model?.fileUrl}',fit: BoxFit.fill,),
-                          //   ),
-                          // ),
-                          // Visibility(
-                          //   visible: widget.message_model?.fileUrl!=null &&  widget.message_model?.messagetype=='docx' || widget.message_model?.messagetype=='doc' || widget.message_model?.messagetype=='txt'|| widget.message_model?.messagetype=='xlsx',
-                          //   child: Container(
-                          //     height: 60,
-                          //     width: sw,
-                          //     decoration: BoxDecoration(
-                          //         color: Colors.grey
-                          //     ),
-                          //     child: Center(child: Text('${widget.message_model?.messagetype} File',style: TextStyle(color: Colors.white),)),
-                          //   ),
-                          // ),
-                          // Visibility(
-                          //     visible: widget.message_model?.fileUrl!=null,child:SizedBox(height: 10,)),
-
-                          Row(
-                            children: [
-                              Container(
-                                width: 200,
-                                child: Text(
-                                    "Lorem ipsum is  visual form of a document.",maxLines: 3,
-                                    style: GoogleFonts.domine(textStyle:TextStyle(color: Colors.black, fontSize: 14),)
-                                ),
-                              ),
-                            ],
-                          ),
-
-
-
-                        ],
-                      ),
-
-                    ),
-                    Positioned.fill(
-                      right: -70,
-
-                        child: Text(
-                          "12:05",
-                          style:GoogleFonts.domine(textStyle: TextStyle(color: Colors.black38, fontSize: 20)),
-                        )),
-                  ],
-                ),
+                child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text('hy,  Hello sir How are you?',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.w400),))),
               ),
+              Positioned.fill(
+                bottom: -74,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    child: Text("03:02 PM",style: GoogleFonts.poppins(fontSize: 12,fontWeight: FontWeight.w400,color: Color(0xff9E9E9E)),),
+                  ),
+                ),
+              )
+
             ],
           ),
-        ),
-      ],
+
+
     );
   }
 }

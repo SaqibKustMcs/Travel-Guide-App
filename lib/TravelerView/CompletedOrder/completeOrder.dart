@@ -56,7 +56,7 @@ import 'package:travel_guide/Widgets/topContainer.dart';
                ),
                SizedBox(height: 30,),
                Container(
-                 height: MediaQuery.of(context).size.height*0.14,
+                 height: 104,
                  width: MediaQuery.of(context).size.width*0.9,
                  decoration: BoxDecoration(
                  color: Color(0xffFFFFFFD),
@@ -116,7 +116,7 @@ import 'package:travel_guide/Widgets/topContainer.dart';
                ),
                SizedBox(height: 30,),
                Container(
-                 height: MediaQuery.of(context).size.height*0.14,
+                 height: 104,
                  width: MediaQuery.of(context).size.width*0.9,
                  decoration: BoxDecoration(
                    color: Color(0xffFFFFFFD),
@@ -186,7 +186,7 @@ import 'package:travel_guide/Widgets/topContainer.dart';
                    ),
                  ),
                ),
-             ],
+           SizedBox(height: 20,)],
            ),
          ),
 

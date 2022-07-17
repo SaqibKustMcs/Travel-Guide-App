@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/GuiderView/GuiderLocation/guiderLocation.dart';
@@ -36,8 +37,8 @@ class GuiderMainMenu extends StatelessWidget {
                       child: Stack(
                   children: [
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.3,
-                        width: MediaQuery.of(context).size.width * 0.85,
+                        height: 275,
+                        width: MediaQuery.of(context).size.width * 0.9,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
@@ -56,7 +57,7 @@ class GuiderMainMenu extends StatelessWidget {
                                     end: Alignment.topCenter,
                                     begin: Alignment.bottomCenter,
                                     colors: [
-                                      Colors.black.withOpacity(0.1),
+                                      Colors.black.withOpacity(0.4),
                                       Colors.black.withOpacity(0.5),
                                     ])),
                             child: Padding(
@@ -65,8 +66,8 @@ class GuiderMainMenu extends StatelessWidget {
                                   child: Text(
                                 "Get your first traveller",
                                 style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                    fontSize: 36,
+                                    color: Color(0xffFFF2EE),
+                                    fontSize: 40.sp,
                                     fontWeight: FontWeight.w500),
                               )),
                             ),
@@ -93,10 +94,10 @@ class GuiderMainMenu extends StatelessWidget {
                         "Traveller's Request",
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -112,10 +113,10 @@ class GuiderMainMenu extends StatelessWidget {
                         "Update Service",
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -130,10 +131,10 @@ class GuiderMainMenu extends StatelessWidget {
                         "Payments",
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -147,10 +148,10 @@ class GuiderMainMenu extends StatelessWidget {
                     child: ListTile(
                       leading: Text(
                         "Orders",
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14,
+                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -164,10 +165,10 @@ class GuiderMainMenu extends StatelessWidget {
                     child: ListTile(
                       leading: Text(
                         "Change Password",
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14,
+                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                             color: Color(0xff4B4B4B)),
                       ),
-                      trailing: Icon(Icons.navigate_next),
+                      trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                     ),
                   ),
                 ),
@@ -177,10 +178,10 @@ class GuiderMainMenu extends StatelessWidget {
                   child: ListTile(
                     leading: Text(
                       "Log Out",
-                      style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14,
+                      style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 14.sp,
                           color: Color(0xff4B4B4B)),
                     ),
-                    trailing: Icon(Icons.navigate_next),
+                    trailing: Icon(Icons.navigate_next,color: Color(0xff4B4B4B)),
                   ),
                 ),
               ],

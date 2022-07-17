@@ -8,6 +8,7 @@ class AllChat extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
       child: Container(
+        height: 97,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
@@ -31,7 +32,7 @@ class AllChat extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+                  padding: const EdgeInsets.only(top: 10.0),
                   child: CircleAvatar(
                     radius: 20.r,
                     backgroundImage: AssetImage('assets/images/Ellipse 1.png'),
@@ -46,7 +47,7 @@ class AllChat extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Row(
+                  Row(crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(

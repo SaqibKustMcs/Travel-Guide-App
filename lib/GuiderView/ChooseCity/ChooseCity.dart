@@ -69,7 +69,7 @@ class ChooseCity extends StatelessWidget {
                 child: Text(
                   "Continue",
                   style: GoogleFonts.poppins(
-                      color: Colors.white, fontWeight: FontWeight.w500),
+                      color: Colors.white, fontWeight: FontWeight.w500,fontSize: 20),
                 )),
 
           ],

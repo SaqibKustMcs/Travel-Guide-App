@@ -99,15 +99,18 @@ class _DashBoardState extends State<DashBoard> {
                   SizedBox(
                     height: 0,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height*0.35,
-                    child: ListView.builder(
-                      itemCount: 2,
-                      itemBuilder: (BuildContext context, int index) {
-                        return InkWell(
-                            onTap: (){Get.to(UserProfile());},
-                            child: DashBoardContainer());
-                      },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10.0,bottom: 10),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height*0.36,
+                      child: ListView.builder(
+                        itemCount: 4,
+                        itemBuilder: (BuildContext context, int index) {
+                          return InkWell(
+                              onTap: (){Get.to(UserProfile());},
+                              child: DashBoardContainer());
+                        },
+                      ),
                     ),
                   ),
                   Row(

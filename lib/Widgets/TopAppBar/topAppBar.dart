@@ -13,7 +13,9 @@ class TopAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.of(context).pop();
+            },
             child: ImageIcon(
 
                 AssetImage("assets/Icons/Vector (13).png")),

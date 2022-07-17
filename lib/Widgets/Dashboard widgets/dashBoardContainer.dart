@@ -10,6 +10,7 @@ class DashBoardContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal:5,vertical: 10),
       child: Container(
+        height: 111,
        decoration: BoxDecoration(
          borderRadius: BorderRadius.circular(10),
          color: Colors.white,
@@ -28,7 +29,7 @@ class DashBoardContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.13,
+                height: 101,
                 width: MediaQuery.of(context).size.width * 0.3,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -82,7 +83,7 @@ class DashBoardContainer extends StatelessWidget {
                               //   });
                               // },
                             ),
-                            Text('(120)',style: GoogleFonts.poppins(fontSize: 10.sp,color: Color(0xff666666)),),
+                            Text('(120)',style: GoogleFonts.poppins(fontWeight: FontWeight.w300,fontSize: 8.sp,color: Color(0xff666666)),),
                           ],
                         ),
 
@@ -111,7 +112,7 @@ class DashBoardContainer extends StatelessWidget {
                       Text(
                         '\$124/h',
                         style:
-                        GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 13.sp),
+                        GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 13.sp,color: Color(0xff183046)),
                       ),
                       Icon(
                         Icons.favorite_border,

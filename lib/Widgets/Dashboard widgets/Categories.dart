@@ -7,7 +7,8 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10,),
-      width: MediaQuery.of(context).size.width*0.48,
+      height: 61,
+      width: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
@@ -23,8 +24,8 @@ class Categories extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height*0.08,
-            width: MediaQuery.of(context).size.width*0.15,
+            height: 45,
+            width: 45,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(

@@ -20,7 +20,7 @@ class AllRequest extends StatelessWidget {
               children: [
                 TopAppBar(),
                 Container(
-                  height: MediaQuery.of(context).size.height *0.78,
+                  height: MediaQuery.of(context).size.height *0.8,
                   width: MediaQuery.of(context).size.width * 0.93,
                   decoration: BoxDecoration(border: Border.all(width: 0.5)),
                   child: SingleChildScrollView(
@@ -158,11 +158,8 @@ class AllRequest extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 20,),
-                        Container(
-                          height: MediaQuery.of(context).size.height*0.14,
-                          width: MediaQuery.of(context).size.width*0.9,
-                          decoration: BoxDecoration(
-                          ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
                           child: Row(
                             children: [
                               CircleAvatar(
@@ -173,7 +170,7 @@ class AllRequest extends StatelessWidget {
                               ),
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                                  padding: const EdgeInsets.symmetric(horizontal: 12.0,),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,13 +194,14 @@ class AllRequest extends StatelessWidget {
                             ],
                           ),
                         ),
+                        // SizedBox(height: 30,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 18.0),
                           child: Row(children: [
                             Text(
                               "View more comments",style: GoogleFonts.poppins(fontSize: 12.sp),
                             ),
-                            Text(" (12)",style: GoogleFonts.poppins(fontWeight: FontWeight.w500),)
+                            Text(" (12)",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 12.sp),)
                           ],),
                         )
 
@@ -232,6 +230,8 @@ class AllRequest extends StatelessWidget {
                     Text(" Add Media",style: GoogleFonts.poppins(fontSize: 16.sp,fontWeight:FontWeight.w400,color: Color(0xff9C9C9C)),)
                   ],
                 ),
+                SizedBox(height: 20,),
+
               ],
             ),
           ),

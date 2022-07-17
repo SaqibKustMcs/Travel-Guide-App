@@ -12,7 +12,7 @@ class NotificationPageWidget extends StatelessWidget {
         horizontal: 5.0,vertical: 10
       ),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.08,
+        height: 64,
         margin: EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
           color: Colors.white,

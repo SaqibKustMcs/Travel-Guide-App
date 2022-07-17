@@ -41,12 +41,12 @@ class EditProfile extends StatelessWidget {
                                     height: 30,
                                     width: 30,
                                     child: Icon(
-                                      Icons.camera_alt,
+                                      Icons.camera_alt,color: Colors.white,
                                       size: 17,
                                     ),
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color:Colors.white54,
+                                      color:Color(0xffCB9CAA),
                                     ),
                                   ),
                                 ),

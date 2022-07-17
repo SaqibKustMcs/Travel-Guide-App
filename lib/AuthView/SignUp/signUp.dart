@@ -6,6 +6,11 @@ import 'package:travel_guide/AuthView/LoginView/loginScreen.dart';
 import 'package:travel_guide/Widgets/CustomTextFields.dart';
 import 'package:travel_guide/Widgets/DropDown/dropDown.dart';
 
+import '../../BottomBar/bottomNavBar.dart';
+import '../../Constants/constants.dart';
+import '../../GuiderBottomBar/guiderBottomNavBar.dart';
+import '../../GuiderView/ChooseCity/ChooseCity.dart';
+
 class SignUp extends StatelessWidget {
   var selectedValue= "Traveller";
 
@@ -77,7 +82,23 @@ class SignUp extends StatelessWidget {
                 backgroundColor: Color(0xffE27D5F),
                 padding: EdgeInsets.symmetric(horizontal: 70, vertical: 14),
               ),
-              onPressed: () {},
+              onPressed: () {
+                if(finalChoosenSignup== "Traveller"){
+                  // print("BC");
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder:
+                    (context) => bottomNavigationBar()
+                    )
+                  );
+                } else if (finalChoosenSignup == "Guider"){
+                  // print("Kamina");
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder:
+                          (context) => ChooseCity()
+                      )
+                  );
+                }
+              },
               child: Text(
                 "Sign Up",
                 style: GoogleFonts.poppins(

@@ -40,7 +40,7 @@ class NotificationPage extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height,
                     child: ListView.builder(
-                      itemCount: 15,
+                      itemCount: 10,
                       itemBuilder: (BuildContext context, int index) {
                         return NotificationPageWidget();
                       },

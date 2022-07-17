@@ -84,17 +84,20 @@ class GuiderDashBoard extends StatelessWidget {
                   SizedBox(
                     height: 0,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.37,
-                    child: ListView.builder(
-                      itemCount: 2,
-                      itemBuilder: (BuildContext context, int index) {
-                        return InkWell(
-                            onTap: () {
-                              Get.to(GuiderUserProfile());
-                            },
-                            child: DashBoardContainer());
-                      },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 18.0,bottom: 25),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.36,
+                      child: ListView.builder(
+                        itemCount: 3,
+                        itemBuilder: (BuildContext context, int index) {
+                          return InkWell(
+                              onTap: () {
+                                Get.to(GuiderUserProfile());
+                              },
+                              child: DashBoardContainer());
+                        },
+                      ),
                     ),
                   ),
                   Row(

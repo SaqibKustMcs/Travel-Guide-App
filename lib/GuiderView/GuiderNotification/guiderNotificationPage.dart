@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_guide/Widgets/NotificationWidgets/notificationPageWidgets.dart';
 import 'package:travel_guide/Widgets/TopAppBar/topAppBar.dart';
@@ -31,8 +32,8 @@ class GuiderNotificationPage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Notifications',style: GoogleFonts.poppins(fontSize: 21,fontWeight: FontWeight.w500),),
-                            Icon(Icons.notifications_on_outlined)
+                            Text('Notifications',style: GoogleFonts.poppins(fontSize: 24.sp,fontWeight: FontWeight.w500,color: Color(0xff494A4A)),),
+                            Icon(Icons.notifications_on_outlined,color: Color(0xff494A4A),)
                           ],
                         ),
                       ),
@@ -41,7 +42,7 @@ class GuiderNotificationPage extends StatelessWidget {
                       Container(
                         height: MediaQuery.of(context).size.height,
                         child: ListView.builder(
-                          itemCount: 5,
+                          itemCount: 15,
                           itemBuilder: (BuildContext context, int index) {
                             return NotificationPageWidget();
                           },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_guide/TravelerView/Notification/travellerChats.dart';
 import 'package:travel_guide/Widgets/NotificationWidgets/allChats.dart';
 
 class AllChats extends StatelessWidget {
@@ -78,7 +80,9 @@ class AllChats extends StatelessWidget {
                   child: ListView.builder(
                     itemCount: 10,
                     itemBuilder: (BuildContext context, int index) {
-                      return AllChat();
+                      return GestureDetector(
+                          onTap: (){Get.to(TravellerChats());},
+                          child: AllChat());
                     },
                   ),
                 ),
